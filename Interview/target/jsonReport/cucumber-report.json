@@ -1,0 +1,145 @@
+[
+  {
+    "line": 1,
+    "elements": [
+      {
+        "start_timestamp": "2020-07-21T04:51:59.889Z",
+        "line": 14,
+        "name": "Get Employee details",
+        "description": "",
+        "id": "empolyee-details;get-employee-details;;2",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 729000000,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "Header of get product",
+            "match": {
+              "location": "stepDefinations.StepDefination.header_of_get_product()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 1508000000,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "User call \"GetEmployeeApi\" with \"GET\" https request",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"GetEmployeeApi\"",
+                  "offset": 10
+                },
+                {
+                  "val": "\"GET\"",
+                  "offset": 32
+                }
+              ],
+              "location": "stepDefinations.StepDefination.user_call_with_https_request(java.lang.String,java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 2000000,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "The Api call got success with Status code \"200\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"200\"",
+                  "offset": 42
+                }
+              ],
+              "location": "stepDefinations.StepDefination.the_Api_call_got_success_with_Status_code(java.lang.String)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "User Will get the response as JSON",
+            "match": {
+              "location": "stepDefinations.StepDefination.user_Will_get_the_response_as_JSON()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 406000000,
+              "status": "passed"
+            },
+            "line": 9,
+            "name": "user will get \"200\",\"25\",\"QA Automation Developer\",\"25-02-1994\",\"data retrieved successful\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"200\"",
+                  "offset": 14
+                },
+                {
+                  "val": "\"25\"",
+                  "offset": 20
+                },
+                {
+                  "val": "\"QA Automation Developer\"",
+                  "offset": 25
+                },
+                {
+                  "val": "\"25-02-1994\"",
+                  "offset": 51
+                },
+                {
+                  "val": "\"data retrieved successful\"",
+                  "offset": 64
+                }
+              ],
+              "location": "stepDefinations.StepDefination.user_will_get(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "error_message": "java.lang.AssertionError: expected [\u003ccompany\u003e] but found [IG Infotech]\r\n\tat org.testng.Assert.fail(Assert.java:96)\r\n\tat org.testng.Assert.failNotEquals(Assert.java:776)\r\n\tat org.testng.Assert.assertEqualsImpl(Assert.java:137)\r\n\tat org.testng.Assert.assertEquals(Assert.java:118)\r\n\tat org.testng.Assert.assertEquals(Assert.java:453)\r\n\tat org.testng.Assert.assertEquals(Assert.java:463)\r\n\tat stepDefinations.StepDefination.user_will_get_Company_name_as(StepDefination.java:76)\r\n\tat ✽.user will get Company name as \"\u003ccompany\u003e\"(file:///C:/WorkSpace/Interview/src/test/java/features/employee.feature:10)\r\n",
+              "duration": 10000000,
+              "status": "failed"
+            },
+            "line": 10,
+            "name": "user will get Company name as \"\u003ccompany\u003e\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"\u003ccompany\u003e\"",
+                  "offset": 30
+                }
+              ],
+              "location": "stepDefinations.StepDefination.user_will_get_Company_name_as(java.lang.String)"
+            },
+            "keyword": "And "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@Smoke"
+          }
+        ]
+      }
+    ],
+    "name": "empolyee details",
+    "description": "",
+    "id": "empolyee-details",
+    "keyword": "Feature",
+    "uri": "file:src/test/java/features/employee.feature",
+    "tags": []
+  }
+]

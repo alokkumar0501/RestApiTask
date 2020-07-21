@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="1" ignored="0" total="1" passed="0">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Default suite" duration-ms="3333" started-at="2020-07-21T04:51:59Z" finished-at="2020-07-21T04:52:02Z">
+    <groups>
+      <group name="cucumber">
+        <method signature="AbstractTestNGCucumberTests.runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:cucumberOptions.TestRunner@6adede5]" name="runScenario" class="io.cucumber.testng.AbstractTestNGCucumberTests"/>
+      </group> <!-- cucumber -->
+    </groups>
+    <test name="Default test" duration-ms="3333" started-at="2020-07-21T04:51:59Z" finished-at="2020-07-21T04:52:02Z">
+      <class name="cucumberOptions.TestRunner">
+        <test-method status="PASS" signature="setUpClass()[pri:0, instance:cucumberOptions.TestRunner@6adede5]" name="setUpClass" is-config="true" duration-ms="396" started-at="2020-07-21T04:51:59Z" finished-at="2020-07-21T04:51:59Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUpClass -->
+        <test-method status="FAIL" signature="runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:cucumberOptions.TestRunner@6adede5]" name="runScenario" duration-ms="2830" started-at="2020-07-21T04:51:59Z" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2020-07-21T04:52:02Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Get Employee details"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Optional[empolyee details]"]]>
+              </value>
+            </param>
+          </params>
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[expected [<company>] but found [IG Infotech]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: expected [<company>] but found [IG Infotech]
+at org.testng.Assert.fail(Assert.java:96)
+at org.testng.Assert.failNotEquals(Assert.java:776)
+at org.testng.Assert.assertEqualsImpl(Assert.java:137)
+at org.testng.Assert.assertEquals(Assert.java:118)
+at org.testng.Assert.assertEquals(Assert.java:453)
+at org.testng.Assert.assertEquals(Assert.java:463)
+at stepDefinations.StepDefination.user_will_get_Company_name_as(StepDefination.java:76)
+at ✽.user will get Company name as "<company>"(file:///C:/WorkSpace/Interview/src/test/java/features/employee.feature:10)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method status="PASS" signature="tearDownClass()[pri:0, instance:cucumberOptions.TestRunner@6adede5]" name="tearDownClass" is-config="true" duration-ms="79" started-at="2020-07-21T04:52:02Z" finished-at="2020-07-21T04:52:02Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDownClass -->
+      </class> <!-- cucumberOptions.TestRunner -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>
