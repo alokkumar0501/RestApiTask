@@ -18,6 +18,7 @@ public class StepDefination extends Utility {
 	Response res;
 	JsonPath js;
 	int count;
+	String actualCompany;
 	
 	@Given("Header of get product")
 	public void header_of_get_product() throws IOException {
@@ -63,6 +64,7 @@ public class StepDefination extends Utility {
 			 assertEquals(actualRole, expRole);
 			 String actualDob=js.get("employeeData["+i+"].dob");
 			 assertEquals(actualDob, expDob);
+			 actualCompany=js.get("employeeData["+i+"].company");
 		}
 		String actualMessage=getJsonPath(res,"message");
 		assertEquals(actualMessage, expMessage);	
@@ -70,11 +72,7 @@ public class StepDefination extends Utility {
 	
 	@Then("user will get Company name as {string}")
 	public void user_will_get_Company_name_as(String expCompany) {
-		for(int i=0;i<count;i++)
-		{
-			 String actualCompany=js.get("employeeData["+i+"].company");
-			 assertEquals(String.valueOf(actualCompany), expCompany);
-		}
+	    assertEquals(String.valueOf(actualCompany), expCompany);
 	}
 
 }
